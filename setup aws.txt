@@ -1,0 +1,48 @@
+AccessId: AKIAJDTXSKUY5OYZU7QA
+Secret access key: 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
+
+
+sudo su -
+apt-get update 
+apt-get install awscli
+aws s3 cp s3://frank1w ./ --sse --recursive --region "us-east-1"
+
+
+pip install awscli
+aws configure
+wget http://files.fast.ai/files/setup_p2.sh
+bash setup_p2.sh
+vpc id: vpc-c66fbea0
+Subnet ID: subnet-4f1ba114
+
+ec2-34-211-29-88.us-west-2.compute.amazonaws.com:8888
+
+ssh -i "deeplearning.pem" -L 8889:127.0.0.1:8888 ubuntu@ec2-34-212-176-70.us-west-2.compute.amazonaws.com
+
+
+
+from IPython.lib import passwd 
+passwd()
+jupyter notebook --generate-config 
+vi ~/.jupyter/jupyter_notebook_config.py
+
+c = get_config()  # get the config object
+c.NotebookApp.certfile = u'/home/ubuntu/ssl/cert.pem' # path to the certificate we generated
+c.NotebookApp.keyfile = u'/home/ubuntu/ssl/cert.key' # path to the certificate key we generated
+c.IPKernelApp.pylab = 'inline'  # in-line figure when using Matplotlib
+c.NotebookApp.ip = '*'  # serve the notebooks locally
+c.NotebookApp.open_browser = False  # do not open a browser window by default when using notebooks
+c.NotebookApp.password = u'sha1:7031b7c33374:8ca811954dcffb04546a9ca4d3a83722b8969c01'  # this is the password hash that we generated earlier.
+c.NotebookApp.port = 9999
+
+
+ipython notebook --no-browser
+
+scp -i ~/Downloads/file.pem local_image_file user@ec2_elastic_ip:/home/user/images/
+sudo apt-get install python-lxml
+sudo pip install kaggle-cli
+pip install bcolz
+conda update mkl
+ 
+
+pip install keras --upgrade
