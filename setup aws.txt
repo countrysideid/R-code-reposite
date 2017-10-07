@@ -1,5 +1,4 @@
-AccessId: AKIAJDTXSKUY5OYZU7QA
-Secret access key: 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
+
 
 
 sudo su -
@@ -15,9 +14,9 @@ bash setup_p2.sh
 vpc id: vpc-c66fbea0
 Subnet ID: subnet-4f1ba114
 
-ec2-34-211-29-88.us-west-2.compute.amazonaws.com:8888
 
-ssh -i "deeplearning.pem" -L 8889:127.0.0.1:8888 ubuntu@ec2-34-212-176-70.us-west-2.compute.amazonaws.com
+
+ssh -i "deeplearning.pem" -L 8889:127.0.0.1:8888 ubuntu@
 
 
 
@@ -32,7 +31,7 @@ c.NotebookApp.keyfile = u'/home/ubuntu/ssl/cert.key' # path to the certificate k
 c.IPKernelApp.pylab = 'inline'  # in-line figure when using Matplotlib
 c.NotebookApp.ip = '*'  # serve the notebooks locally
 c.NotebookApp.open_browser = False  # do not open a browser window by default when using notebooks
-c.NotebookApp.password = u'sha1:7031b7c33374:8ca811954dcffb04546a9ca4d3a83722b8969c01'  # this is the password hash that we generated earlier.
+c.NotebookApp.password = u'sha1:7031b7c33374:'  # this is the password hash that we generated earlier.
 c.NotebookApp.port = 9999
 
 
